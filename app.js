@@ -7,6 +7,7 @@ const {ItemModel } = require('./Models/items')
 const{ItemgroupModel} = require('./Models/itemgroups')
 const { InventoryModel } = require('./Models/inventoryadjust')
 const{CustomerModel} = require('./Models/customers')
+const{SalesorderModel} =require('./Models/salesorders')
 
 let app = Express()
 app.use(BodyParser.urlencoded({extended:true}))
@@ -15,6 +16,7 @@ app.use(Cors())
 
 Mongoose.connect("mongodb+srv://webprojectspraji:2020web@cluster0.ojqbnfv.mongodb.net/ItemDB?retryWrites=true&w=majority",{useNewUrlParser:true})
 
+//inventory module//
 app.post('/additems',async(req,res)=>{
     let data = new ItemModel(req.body)
     console.log(data)
@@ -66,6 +68,31 @@ app.get('/viewinventory',async(req,res)=>{
       }
 })
 
-app.listen(3002,()=>{
+//Sales//
+app.post('/addcustomer',async(req,res)=>{
+  let data = new CustomerModel(req.body)
+  console.log(data)
+  await data.save()
+  res.json({"status":"success","data":data})
+})
+
+app.get('/viewcustomers',async(req,res)=>{
+  try {
+      const result = await CustomerModel.find();
+      res.json(result);
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send("Server Error");
+    }
+})
+
+app.post('/salesorders',async(req,res)=>{
+  let data = new SalesorderModel(req.body)
+  console.log(data)
+  await data.save()
+  res.json({"status":"success","data":data})
+})
+
+app.listen(3001,()=>{
     console.log("App running")
 })
