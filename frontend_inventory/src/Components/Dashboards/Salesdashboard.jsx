@@ -18,8 +18,8 @@ const Salesdashboard = () => {
     </h2>
     
     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-      <div class="accordion-body"><a href="/newitem">Register New Customer</a></div>
-      <div class="accordion-body"><a href="/displayitems">Display All Customers</a></div>
+      <div class="accordion-body"><a href="/addcustomer">Register New Customer</a></div>
+      <div class="accordion-body"><a href="/Viewcustomer">Display All Customers</a></div>
     </div>
   </div>
   <div class="accordion-item">
@@ -28,9 +28,9 @@ const Salesdashboard = () => {
       Sales Orders</button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"><a href='/newitemgroup'>New Sales Order</a></div>
-      <div class="accordion-body"><a href='/viewitemgroup'>Track Orders</a></div>
-      <div class="accordion-body"><a href='/viewitemgroup'>Display Orders</a></div>
+      <div class="accordion-body"><a href='/newsalesorder'>New Sales Order</a></div>
+      <div class="accordion-body"><a href='/tracksalesorder'>Track Orders</a></div>
+      <div class="accordion-body"><a href='/viewsalesorder'>Display Orders</a></div>
     </div>
   </div>
   <div class="accordion-item">
@@ -40,8 +40,8 @@ const Salesdashboard = () => {
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"><a href='/newinventoryadjust'>New Packages</a></div>
-      <div class="accordion-body"><a href='/viewadjust'>Display Packages</a></div>
+      <div class="accordion-body"><a href='/'>New Packages</a></div>
+      <div class="accordion-body"><a href='/'>Display Packages</a></div>
     </div>
   </div>
   <div class="accordion-item">
@@ -51,8 +51,8 @@ const Salesdashboard = () => {
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"><a href='/newinventoryadjust'>Add delivery Challans</a></div>
-      <div class="accordion-body"><a href='/viewadjust'>Display delivery Challans</a></div>
+      <div class="accordion-body"><a href='/'>Add delivery Challans</a></div>
+      <div class="accordion-body"><a href='/'>Display delivery Challans</a></div>
     </div>
   </div>
   <div class="accordion-item">

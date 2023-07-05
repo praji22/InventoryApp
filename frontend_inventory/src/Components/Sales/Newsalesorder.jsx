@@ -43,7 +43,7 @@ const Newsalesorder = () => {
              payment:""
           })
           alert("New Sales Order added")
-          navigate('/')}
+          navigate('/newsalesorder')}
         )
     .catch(
        (error)=>{

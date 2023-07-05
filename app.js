@@ -8,6 +8,7 @@ const{ItemgroupModel} = require('./Models/itemgroups')
 const { InventoryModel } = require('./Models/inventoryadjust')
 const{CustomerModel} = require('./Models/customers')
 const{SalesorderModel} =require('./Models/salesorders')
+const{PackageModel}=require('./Models/packages')
 
 let app = Express()
 app.use(BodyParser.urlencoded({extended:true}))
@@ -88,6 +89,23 @@ app.get('/viewcustomers',async(req,res)=>{
 
 app.post('/salesorders',async(req,res)=>{
   let data = new SalesorderModel(req.body)
+  console.log(data)
+  await data.save()
+  res.json({"status":"success","data":data})
+})
+
+app.get('/viewsalesorders',async(req,res)=>{
+  try {
+      const result = await SalesorderModel.find();
+      res.json(result);
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send("Server Error");
+    }
+})
+
+app.post('/newpackages',async(req,res)=>{
+  let data = new PackageModel(req.body)
   console.log(data)
   await data.save()
   res.json({"status":"success","data":data})

@@ -13,6 +13,8 @@ import Viewadjust from './Components/Inventories/Viewadjust';
 import Newcustomer from './Components/Sales/Newcustomer';
 import Viewcustomer from './Components/Sales/Viewcustomer';
 import Newsalesorder from './Components/Sales/Newsalesorder';
+import Tracksalesorder from './Components/Sales/Tracksalesorder';
+import Viewsalesorders from './Components/Sales/Viewsalesorders';
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
       <Route  path='/addcustomer' exact element={<Newcustomer/>}/>
       <Route  path='/viewcustomer' exact element={<Viewcustomer/>}/>
       <Route path='/newsalesorder' exact element={<Newsalesorder/>}/>
+      <Route path='/tracksalesorder' exact element={<Tracksalesorder/>}/>
+      <Route path='/viewsalesorder' exact element ={<Viewsalesorders/>}/>
     </Routes>
     </BrowserRouter>
   );

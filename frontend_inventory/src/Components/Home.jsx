@@ -34,7 +34,7 @@ const Home = () => {
                         </div>
                          <ul className="list-group list-group-flush">
                            <li className="list-group-item"><a href='/viewcustomer'>Customers</a></li>
-                           <li className="list-group-item"><a href='/newsalesorder'>Sales Orders</a></li>
+                           <li className="list-group-item"><a href='/tracksalesorder'>Track Sales Orders</a></li>
                            <li className="list-group-item">Packages</li>
                         </ul>
                         <div className="card-body">
